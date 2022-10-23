@@ -1,6 +1,7 @@
 
 from .base import Base
 
+
 class ReactivateRecorrency(Base):
 
     def __init__(self, merchant, environment):
@@ -11,6 +12,6 @@ class ReactivateRecorrency(Base):
 
     def execute(self, payment_id):
 
-        uri = '%s1/RecurrentPayment/%s/Reactivate' % (self.environment.api_query, payment_id)
+        uri = '%s1/RecurrentPayment/%s/Reactivate' % (self.environment.api, payment_id)
 
         return self.send_request("PUT", uri)

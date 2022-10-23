@@ -1,5 +1,5 @@
-
 from .base import Base
+
 
 class CreateSale(Base):
 

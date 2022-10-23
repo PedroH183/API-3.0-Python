@@ -10,9 +10,10 @@ PROVIDER_BRADESCO = "Bradesco"
 PROVIDER_BANCO_DO_BRASIL = "BancoDoBrasil"
 PROVIDER_SIMULADO = "Simulado"
 
+
 class Payment(ObjectJSON):
 
-    def __init__(self, amount, installments = 1):
+    def __init__(self, amount, installments=1):
 
         self.amount = amount
         self.service_tax_amount = None
@@ -48,13 +49,12 @@ class Payment(ObjectJSON):
         self.digitable_line = None
         self.address = None
 
-        #Boleto
+        # Boleto
         self.boleto_number = None
         self.assignor = None
         self.demonstrative = None
         self.identification = None
         self.instructions = None
-
 
     def prepare(self):
 

@@ -5,6 +5,7 @@ INTERVAL_QUARTERLY = "Quarterly"
 INTERVAL_SEMIANNUAL = "SemiAnnual"
 INTERVAL_ANNUAL = "Annual"
 
+
 class RecurrentPayment(object):
 
     def __init__(self, authorize_now=True):
@@ -13,4 +14,5 @@ class RecurrentPayment(object):
         self.start_date = None
         self.end_date = None
         self.interval = None
+        self.next_recurrency = None
         self.recurrent_payment_id = None
