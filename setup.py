@@ -3,15 +3,12 @@
 
 import os
 import sys
-from wsgiref.simple_server import sys_version
 
-try:
+
+if sys.version_info[:2] >= (3, 10):
     from setuptools import setup, find_packages
-
-except ImportError:
-
-    if sys.version_info[:2] >= (3, 10):
-        from distutils.core import setup # type: ignore
+else:
+    from distutils.core import setup # type: ignore
 
 settings = dict()
 
